@@ -16,9 +16,7 @@
         return;
     }
     Class class = [clsObject class];
-    // 得到被替换类的实例方法
     Method fromMethod = class_getInstanceMethod(class, fromSelector);
-    // 得到被替换类的实例方法
     Method toMethod = class_getInstanceMethod(class, toSelector);
     
     [self exchangeMethodWithClass:class fromSelector:fromSelector fromMethod:fromMethod toSelector:toSelector toMethod:toMethod];
@@ -28,9 +26,7 @@
 + (void)hookClass:(Class)cls fromSelector:(SEL)fromSelector toSelector:(SEL)toSelector {
     
     Class class = cls;
-    // 得到被替换类的实例方法
     Method fromMethod = class_getClassMethod(class, fromSelector);
-    // 得到被替换类的实例方法
     Method toMethod = class_getClassMethod(class, toSelector);
     
     [self exchangeMethodWithClass:class fromSelector:fromSelector fromMethod:fromMethod toSelector:toSelector toMethod:toMethod];

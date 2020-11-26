@@ -1,0 +1,6 @@
+framework module YQHook {
+  umbrella header "YQHook-umbrella.h"
+
+  export *
+  module * { export * }
+}

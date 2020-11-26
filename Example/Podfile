@@ -1,0 +1,6 @@
+use_frameworks!
+target 'YQHook_Tests' do
+  pod 'YQHook', :path => '../'
+  
+  
+end
